@@ -1,0 +1,53 @@
+body {
+  text-align: center;
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+   background-image:url(692032.jpg);
+  background-size: cover;                  
+  background-position: center;             
+  background-repeat: no-repeat;
+}
+
+h1 {
+  color: #2c3e50;
+}
+
+.field {
+  width: 600px;
+  height: 300px;
+  background: green;
+  border: 5px solid #333;
+  margin: 20px auto;
+  position: relative;
+}
+
+.goal {
+  width: 60px;
+  height: 100px;
+  background: #fff;
+  color: #333;
+  text-align: center;
+  line-height: 100px;
+  font-weight: bold;
+  position: absolute;
+  top: 100px;
+}
+
+.left-goal {
+  left: 0;
+}
+
+.right-goal {
+  right: 0;
+}
+
+.ball {
+  width: 30px;
+  height: 30px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 135px;
+  left: 285px;
+  border: 2px solid black;
+}
