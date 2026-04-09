@@ -6,11 +6,11 @@ function addEmployee(){
     let empid = document.getElementById("empid").value;
     let salary = document.getElementById("salary").value;
     let dept = document.getElementById("dept").value;
- if( name===" "|| empid===" "|| salary===" "||dept===" "||)[
+ if( name===" "|| empid===" "|| salary===" "||dept===" "||){
     alert("please fill all fields properly");
     return;
 
- ]
+ }
  let employee ={
     name:name,
     id: id,
@@ -19,4 +19,5 @@ function addEmployee(){
  };
 
  employee.push(employee)
+ 
 }
