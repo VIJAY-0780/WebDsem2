@@ -1,34 +1,40 @@
-function calculateresult(){
-
-    let n=document.getElementById("subjects").ariaValueMax;
-    let total=0;
-
-    for(inti=1;i<=n ; i++)
-    {
-        let markd= parsefloat(prompt("enter marks for subjects"+1));
-    total=total+marks;
-    }
-    let average=total/n;
-
-    let grade;
-    let result;
-    if(average>=90)
-        grade="A";
-    elseif(average>=80)
-        grade="B";
-    ELSEIF(average>=70)
-     grade="C";
-    elseIF( average>=60)
-     grade="D";
-
-     if(average>=50)
-        result="pass";
-    else
-        result="fail";
-
-    document.getElementById("result").innerHTML=
-    "total marks"+total+"br"+
-    "average"+average.toFixed(2)+"br"+
-    "grade"+grade+"br"+
-    "result"+result;
+function getResult(){
+let count = document.getElementById("subCount").value;
+if(count <= 0){
+alert("Enter proper subject count");
+return;
+}
+let sum = 0;
+for(let i=1;i<=count;i++){
+let m = parseFloat(prompt("Marks for Subject " + i));
+if(isNaN(m)){
+alert("Invalid input detected");
+return;
+}
+sum += m;
+}
+let avg = sum / count;
+let grade;
+let status;
+if (avg >= 90) {
+grade = "A+";
+} else if (avg >= 75) {
+grade = "A";
+} else if (avg >= 60) {
+grade = "B";
+} else if (avg >= 50) {
+grade = "C";
+} else {
+grade = "F";
+}
+if (avg >= 40) {
+status = "PASS";
+} else {
+status = "FAIL";
+}
+document.getElementById("outputBox").innerHTML =
+"Total = " + sum + "<br>" +
+"Average = " + avg.toFixed(2) + "<br>" +
+"Grade = " + grade + "<br>" +
+"Result = " + status;
 }
